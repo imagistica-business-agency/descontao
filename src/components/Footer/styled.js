@@ -16,8 +16,6 @@ export const FooterContainer = styled.div`
   padding: 0 20px;
 `
 
-export const FooterTitle = styled.h2``
-
 export const FooterMain = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -32,10 +30,6 @@ export const FooterMain = styled.div`
     grid-template-columns: 1fr;
   `}
 `
-
-export const AddressItem = styled.div``
-
-export const AddressTitle = styled.h3``
 
 export const AddressDesc = styled.div`
   display: grid;
@@ -62,5 +56,3 @@ export const WhatsappIcon = styled(Whatsapp)`
   width: 20px;
   height: 20px;
 `
-
-export const CopyrightWrapper = styled.div``

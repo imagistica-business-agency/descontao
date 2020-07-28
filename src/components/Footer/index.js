@@ -6,11 +6,11 @@ import * as S from './styled'
 const Footer = () => (
   <S.FooterWrapper>
     <S.FooterContainer>
-      <S.FooterTitle>7 lojas, para melhor te atender</S.FooterTitle>
+      <h2>7 lojas, para melhor te atender</h2>
       <S.FooterMain>
         {addresses.map((address, i) => (
-          <S.AddressItem key={i}>
-            <S.AddressTitle>{address.place}</S.AddressTitle>
+          <div key={i}>
+            <h3>{address.place}</h3>
             <S.AddressDesc>
               <S.MarkerIcon />
               {address.address}
@@ -25,9 +25,9 @@ const Footer = () => (
                 <span>{address.ddd}</span> {address.whatsapp}
               </a>
             </S.AddressDesc>
-          </S.AddressItem>
+          </div>
         ))}
-        <S.CopyrightWrapper>
+        <div>
           {new Date().getFullYear()} © Lojas Descontão
           <br />
           Desenvolvido por{' '}
@@ -39,7 +39,7 @@ const Footer = () => (
           >
             Imagística Business Agency
           </a>
-        </S.CopyrightWrapper>
+        </div>
       </S.FooterMain>
     </S.FooterContainer>
   </S.FooterWrapper>
