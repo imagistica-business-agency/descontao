@@ -1,12 +1,14 @@
 import React from 'react'
 
 import GlobalStyles from './global'
-import React from "react"
+
+import Footer from '../Footer'
 
 const Layout = ({ children }) => (
   <>
     <GlobalStyles />
     <main>{children}</main>
+    <Footer />
   </>
 )
 

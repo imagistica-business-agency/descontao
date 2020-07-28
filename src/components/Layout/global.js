@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import media from 'styled-media-query'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -27,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
   h1, h2, h3 {
     font-weight: 900;
     font-style: italic;
+    line-height: 1.1;
   }
 
   h1 {
@@ -36,8 +38,11 @@ const GlobalStyles = createGlobalStyle`
 
   h2 {
     font-size: 3.125rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 
+    ${media.lessThan('small')`
+      font-size: 2.6rem;
+    `}
   }
 
   h3 {
