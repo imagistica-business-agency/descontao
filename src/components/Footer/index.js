@@ -17,7 +17,7 @@ const Footer = () => (
 
               <S.WhatsappIcon />
               <a
-                href="#"
+                href={address.whatsapp}
                 alt="WhatsApp"
                 rel="noopener noreferrer"
                 target="_blank"

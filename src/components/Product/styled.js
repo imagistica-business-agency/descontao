@@ -3,13 +3,16 @@ import Img from 'gatsby-image'
 import { Heart } from '@styled-icons/fa-regular/Heart'
 import { Heart as HeartSolid } from '@styled-icons/fa-solid/Heart'
 
-export const ProductWrapper = styled.div``
+export const ProductWrapper = styled.div`
+  display: grid;
+  grid-template-rows: 1fr 40px;
+  align-content: stretch;
+`
 
-export const ProductImage = styled.div`
+export const ProductImage = styled(Img)`
   width: 100%;
-  height: 300px;
+  max-height: 100%;
   margin-bottom: 10px;
-  background: pink;
 `
 
 export const ProductDesc = styled.div`

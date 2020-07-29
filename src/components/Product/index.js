@@ -3,15 +3,15 @@ import { Link } from 'gatsby'
 
 import * as S from './styled'
 
-const Product = ({ image, title, ref, link }) => (
+const Product = ({ image, title, code, link }) => (
   <S.ProductWrapper>
-    <S.ProductImage fluid={image} />
+    {image && <S.ProductImage fluid={image} />}
     <S.ProductDesc>
       <div>
         <Link to={link} alt={title}>
           <S.ProductTitle>{title}</S.ProductTitle>
         </Link>
-        <S.ProductRef>Ref.: {ref}</S.ProductRef>
+        <S.ProductRef>Ref.: {code}</S.ProductRef>
       </div>
       <S.HeartIcon />
     </S.ProductDesc>
