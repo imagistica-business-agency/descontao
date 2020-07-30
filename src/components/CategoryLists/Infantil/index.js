@@ -2,7 +2,6 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Category from '../../Category'
-import * as S from '../styled'
 
 const CategoryList = () => {
   const data = useStaticQuery(graphql`

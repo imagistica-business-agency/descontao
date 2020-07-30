@@ -1,11 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import ProductPageItem from '../components/ProductPageItem'
 import Category from '../components/Category'
 
 const Wrapper = styled.section`
@@ -14,26 +12,20 @@ const Wrapper = styled.section`
   padding: 0 20px;
 `
 
-const productPage = ({ data }) => {
-  const product = data.product
+const categoryPage = ({ data }) => {
   const featuredProduct = data.featuredProduct.edges
   const otherProducts = data.otherProducts.edges
-
   return (
     <Layout>
-      <SEO title={product.frontmatter.title} />
       <Wrapper>
-        {product.frontmatter.image.map(({ fluid }) => (
-          <Img fluid={fluid} />
+        {featuredProduct.map(({ node: featuredProduct }) => (
+          <>
+            <SEO title={featuredProduct.frontmatter.category} />
+            <h2 style={{ textTransform: 'capitalize' }}>
+              {featuredProduct.frontmatter.category}
+            </h2>
+          </>
         ))}
-
-        {/* <ProductPageItem
-          title={product.frontmatter.title}
-          // image={product.frontmatter.image.childImageSharp.fluid}
-          code={product.frontmatter.code}
-          html={product.html}
-        /> */}
-        <h2>Talvez você se interesse</h2>
         <Category
           featuredProduct={featuredProduct}
           otherProducts={otherProducts}
@@ -44,22 +36,7 @@ const productPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query($id: String!, $category: String!) {
-    product: markdownRemark(id: { eq: $id }) {
-      frontmatter {
-        title
-        code
-        image {
-          childImageSharp {
-            fluid(maxWidth: 580, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-      id
-      html
-    }
+  query($category: String!) {
     featuredProduct: allMarkdownRemark(
       limit: 1
       filter: {
@@ -72,6 +49,7 @@ export const query = graphql`
           frontmatter {
             title
             code
+            desc
             category
             image {
               childImageSharp {
@@ -81,11 +59,14 @@ export const query = graphql`
               }
             }
           }
+          fields {
+            slug
+          }
         }
       }
     }
     otherProducts: allMarkdownRemark(
-      limit: 7
+      limit: 4
       filter: {
         frontmatter: { featured: { eq: false }, category: { eq: $category } }
       }
@@ -96,6 +77,7 @@ export const query = graphql`
           frontmatter {
             title
             code
+            desc
             category
             image {
               childImageSharp {
@@ -105,10 +87,13 @@ export const query = graphql`
               }
             }
           }
+          fields {
+            slug
+          }
         }
       }
     }
   }
 `
 
-export default productPage
+export default categoryPage

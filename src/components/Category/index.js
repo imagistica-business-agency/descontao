@@ -10,18 +10,25 @@ const Products = ({ featuredProduct, otherProducts }) => (
         <Product
           key={featuredProduct.frontmatter.title}
           title={featuredProduct.frontmatter.title}
-          link={featuredProduct.fields.slug}
+          link={
+            '/' +
+            featuredProduct.frontmatter.category +
+            '/' +
+            featuredProduct.frontmatter.code
+          }
           code={featuredProduct.frontmatter.code}
-          image={featuredProduct.frontmatter.image.childImageSharp.fluid}
+          // image={featuredProduct.frontmatter.image.childImageSharp.fluid}
         />
       ))}
       {otherProducts.map(({ node: product }) => (
         <Product
           key={product.frontmatter.title}
           title={product.frontmatter.title}
-          link={product.fields.slug}
+          link={
+            '/' + product.frontmatter.category + '/' + product.frontmatter.code
+          }
           code={product.frontmatter.code}
-          image={product.frontmatter.image.childImageSharp.fluid}
+          // image={product.frontmatter.image.childImageSharp.fluid}
         />
       ))}
     </S.ProductList>

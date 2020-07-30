@@ -11,6 +11,10 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             id
+            frontmatter {
+              category
+              code
+            }
             fields {
               slug
             }
@@ -24,15 +28,24 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    const products = result.data.allMarkdownRemark.edges
 
-    posts.forEach(edge => {
+    products.forEach(edge => {
+      const category = edge.node.frontmatter.category
       const id = edge.node.id
       createPage({
-        path: edge.node.fields.slug,
+        path: edge.node.frontmatter.category,
+        component: path.resolve(`src/templates/categoryPage.js`),
+        context: {
+          category
+        }
+      })
+      createPage({
+        path: edge.node.frontmatter.category + '/' + edge.node.frontmatter.code,
         component: path.resolve(`src/templates/productPage.js`),
         context: {
-          id
+          id,
+          category
         }
       })
     })
