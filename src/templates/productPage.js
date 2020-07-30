@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
@@ -23,16 +22,12 @@ const productPage = ({ data }) => {
     <Layout>
       <SEO title={product.frontmatter.title} />
       <Wrapper>
-        {product.frontmatter.image.map(({ fluid }) => (
-          <Img fluid={fluid} />
-        ))}
-
-        {/* <ProductPageItem
+        <ProductPageItem
           title={product.frontmatter.title}
-          // image={product.frontmatter.image.childImageSharp.fluid}
+          image={product.frontmatter.image.childImageSharp.fluid}
           code={product.frontmatter.code}
           html={product.html}
-        /> */}
+        />
         <h2>Talvez você se interesse</h2>
         <Category
           featuredProduct={featuredProduct}
