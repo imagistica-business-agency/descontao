@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Product from '../Product'
 import * as S from './styled'
 
-const Products = () => {
+const Products = ({ category }) => {
   const data = useStaticQuery(graphql`
     query {
       featuredProduct: allMarkdownRemark(
@@ -66,7 +66,7 @@ const Products = () => {
 
   return (
     <S.ProductsWrapper>
-      <S.ProductsCategory>Feminino</S.ProductsCategory>
+      <S.ProductsCategory>{category}</S.ProductsCategory>
 
       <S.GridWrapper>
         <S.ProductList>
