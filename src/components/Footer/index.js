@@ -1,6 +1,7 @@
 import React from 'react'
 
 import addresses from './addresses'
+import SocialLinks from '../SocialLinks'
 import * as S from './styled'
 
 const Footer = () => (
@@ -28,6 +29,9 @@ const Footer = () => (
           </div>
         ))}
         <div>
+          <div style={{ marginBottom: '15px' }}>
+            <SocialLinks />
+          </div>
           {new Date().getFullYear()} © Lojas Descontão
           <br />
           Desenvolvido por{' '}
