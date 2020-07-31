@@ -39,7 +39,7 @@ const GlobalStyles = createGlobalStyle`
 
   h2 {
     font-size: 3.125rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 
     ${media.lessThan('small')`
       font-size: 2.6rem;
@@ -49,6 +49,22 @@ const GlobalStyles = createGlobalStyle`
   h3 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
+  }
+
+  button {
+    background: #DE3B4A;
+    color: white;
+    font-weight: 900;
+    padding: 18px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    transition: 0.3s;
+    cursor: pointer;
+
+    :hover {
+      background: #FD5D6C;
+    }
   }
 `
 
