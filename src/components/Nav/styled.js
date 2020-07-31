@@ -34,10 +34,15 @@ export const Link = styled.li`
 `
 
 export const SubNav = styled.div`
+  background: #ffb646;
+`
+
+export const SubNavContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 10px 0;
-  background: #ffb646;
+  max-width: 1320px;
+  margin: auto;
+  padding: 8px 20px;
 `
 
 export const Title = styled.div`

@@ -53,12 +53,15 @@ const Nav = () => (
       <SocialLinks />
     </S.Nav>
     <S.SubNav>
-      <S.Title>
-        <S.MegaphoneIcon /> Lorem ipsum dolor sit amet
-      </S.Title>
-      <S.Title>
-        <S.BagIcon /> Lorem ipsum dolor sit amet
-      </S.Title>
+      <S.SubNavContainer>
+        <S.Title>
+          <S.MegaphoneIcon /> Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit
+        </S.Title>
+        <S.Title>
+          <S.BagIcon /> Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </S.Title>
+      </S.SubNavContainer>
     </S.SubNav>
   </S.NavWrapper>
 )

@@ -7,11 +7,17 @@ export const ProductWrapper = styled.div`
   display: grid;
   grid-template-rows: 1fr 40px;
   align-content: stretch;
+
+  :nth-child(1) {
+    grid-row: span 2;
+    grid-column: span 2;
+    justify-content: stretch;
+  }
 `
 
 export const ProductImage = styled(Img)`
   width: 100%;
-  max-height: 100%;
+  min-height: 300px;
   margin-bottom: 10px;
 `
 
