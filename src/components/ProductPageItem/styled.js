@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import { Whatsapp } from '@styled-icons/remix-fill/Whatsapp'
 
 export const ProductItemWrapper = styled.section`
   display: grid;
@@ -21,4 +22,11 @@ export const ProductItemTitle = styled.h2`
 
 export const ProductItemCode = styled.div``
 
-export const ProductItemHTML = styled.div``
+export const ProductItemHTML = styled.div`
+  margin: 40px 0;
+`
+
+export const WhatsappIcon = styled(Whatsapp)`
+  width: 20px;
+  margin: -4px 10px 0 0;
+`
