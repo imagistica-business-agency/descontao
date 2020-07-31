@@ -18,6 +18,10 @@ const links = [
   {
     label: 'Tiktok',
     url: `https://tiktok.com/`
+  },
+  {
+    label: 'Heart',
+    url: `https://tiktok.com/`
   }
 ]
 

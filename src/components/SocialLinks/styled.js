@@ -19,5 +19,5 @@ export const SocialLinksLink = styled.a`
 `
 
 export const IconWrapper = styled.div`
-  width: 30px;
+  width: 25px;
 `
