@@ -5,7 +5,7 @@ import * as S from './styled'
 
 const Products = ({ featuredProduct, otherProducts }) => (
   <S.GridWrapper>
-    <S.ProductList>
+    <S.FeaturedProduct>
       {featuredProduct.map(({ node: featuredProduct }) => (
         <Product
           key={featuredProduct.frontmatter.title}
@@ -20,6 +20,8 @@ const Products = ({ featuredProduct, otherProducts }) => (
           image={featuredProduct.frontmatter.image.childImageSharp.fluid}
         />
       ))}
+    </S.FeaturedProduct>
+    <S.ProductList>
       {otherProducts.map(({ node: product }) => (
         <Product
           key={product.frontmatter.title}

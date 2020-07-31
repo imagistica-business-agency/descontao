@@ -16,33 +16,21 @@ export const CategoryTabList = styled(TabList)`
 `
 
 export const CategoryTab = styled(Tab)`
-  background: transparent;
-  border: 1px solid black;
-  padding: 10px 50px;
+  color: #de3b4a;
+  border: 1px solid #de3b4a;
+  padding: 10px 30px;
   margin-right: 20px;
-  font-family: inherit;
-  font-size: 14px;
 
   cursor: pointer;
   transition: 0.5s;
 
   &:hover {
-    background: black;
+    background: #de3b4a;
     color: white;
-  }
-
-  &.white {
-    color: white;
-    border-color: white;
-
-    &:hover {
-      background: white;
-      color: black;
-    }
   }
 
   &.react-tabs__tab--selected {
-    background: black;
+    background: #de3b4a;
     color: white;
   }
 `
