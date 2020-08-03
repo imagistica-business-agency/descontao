@@ -24,7 +24,7 @@ const productPage = ({ data }) => {
       <Wrapper>
         <ProductPageItem
           title={product.frontmatter.title}
-          image={product.frontmatter.image.childImageSharp.fluid}
+          image={product.frontmatter.image}
           code={product.frontmatter.code}
           html={product.html}
         />

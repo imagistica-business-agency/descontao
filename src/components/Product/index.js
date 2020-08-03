@@ -5,7 +5,12 @@ import * as S from './styled'
 
 const Product = ({ image, title, code, link }) => (
   <S.ProductWrapper>
-    {image && <S.ProductImage fluid={image} />}
+    {/* {image.map((item, i) => (
+      <S.ProductImage fluid={item.childImageSharp.fluid} key={i} />
+    ))} */}
+
+    <S.ProductImage fluid={image[0].childImageSharp.fluid} />
+
     <S.ProductDesc>
       <div>
         <Link to={link} alt={title}>

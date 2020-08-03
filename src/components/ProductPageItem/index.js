@@ -7,7 +7,11 @@ const ProductPageItem = ({ title, image, code, html }) => {
 
   return (
     <S.ProductItemWrapper>
-      <S.ProductItemImage fluid={image} />
+      {image.map((item, i) => (
+        <div key={i}>
+          <S.ProductItemImage fluid={item.childImageSharp.fluid} />
+        </div>
+      ))}
       <S.ProductItemDesc>
         <S.ProductItemTitle>{title}</S.ProductItemTitle>
         <S.ProductItemCode>Ref.: {code}</S.ProductItemCode>
