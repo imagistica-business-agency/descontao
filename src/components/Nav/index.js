@@ -9,43 +9,43 @@ const Nav = () => (
   <S.NavWrapper>
     <S.Nav>
       <S.Logo>
-        <Link to="/" alt="Início">
+        <Link to="/" alt="Início" activeClassName="active">
           <img src={logo} alt="Descontão" />
         </Link>
       </S.Logo>
       <S.Links>
         <S.Link>
-          <Link to="/" alt="Início">
+          <Link to="/" alt="Início" activeClassName="active">
             Início
           </Link>
         </S.Link>
         <S.Link>
-          <Link to="/feminino/" alt="Feminino">
+          <Link to="/feminino/" alt="Feminino" activeClassName="active">
             Feminino
           </Link>
         </S.Link>
         <S.Link>
-          <Link to="/masculino/" alt="Masculino">
+          <Link to="/masculino/" alt="Masculino" activeClassName="active">
             Masculino
           </Link>
         </S.Link>
         <S.Link>
-          <Link to="/infantil/" alt="Infantil">
+          <Link to="/infantil/" alt="Infantil" activeClassName="active">
             Infantil
           </Link>
         </S.Link>
         <S.Link>
-          <Link to="/esportivo/" alt="Esportivo">
+          <Link to="/esportivo/" alt="Esportivo" activeClassName="active">
             Esportivo
           </Link>
         </S.Link>
         <S.Link>
-          <Link to="/moda-intima/" alt="Moda Íntima">
+          <Link to="/moda-intima/" alt="Moda Íntima" activeClassName="active">
             Moda Íntima
           </Link>
         </S.Link>
         <S.Link>
-          <Link to="/plus-size/" alt="Plus Size">
+          <Link to="/plus-size/" alt="Plus Size" activeClassName="active">
             Plus Size
           </Link>
         </S.Link>

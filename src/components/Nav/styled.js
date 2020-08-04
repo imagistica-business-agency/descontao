@@ -25,11 +25,23 @@ export const Links = styled.ul`
 `
 
 export const Link = styled.li`
-  margin: 0 20px;
+  margin: 0 5px;
 
   a {
     font-weight: 900;
     font-style: italic;
+    transition: 0.3s;
+    padding: 10px 15px;
+    border-radius: 3px;
+
+    :hover {
+      background: #992c36;
+      text-decoration: none;
+    }
+
+    &.active {
+      background: #992c36;
+    }
   }
 `
 
