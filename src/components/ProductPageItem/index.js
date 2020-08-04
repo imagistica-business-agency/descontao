@@ -15,8 +15,10 @@ const ProductPageItem = ({ title, image, code, html }) => {
         ))}
 
         <S.CategoryTabList>
-          {image.map(i => (
-            <S.CategoryTab key={i} />
+          {image.map((thumb, ii) => (
+            <S.CategoryTab key={ii}>
+              <S.ProductThumb fluid={thumb.childImageSharp.fluid} />
+            </S.CategoryTab>
           ))}
         </S.CategoryTabList>
       </S.CategoryTabs>

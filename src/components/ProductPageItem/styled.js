@@ -16,6 +16,11 @@ export const ProductImage = styled(Img)`
   max-height: 400px;
 `
 
+export const ProductThumb = styled(Img)`
+  width: 50px;
+  height: 50px;
+`
+
 export const CategoryTabs = styled(Tabs)``
 
 export const CategoryTabList = styled(TabList)`
@@ -26,22 +31,14 @@ export const CategoryTabList = styled(TabList)`
 `
 
 export const CategoryTab = styled(Tab)`
-  color: #de3b4a;
-  border: 1px solid #de3b4a;
-  padding: 3px 3px;
   margin: 0 10px;
+  border: 1px solid white;
 
   cursor: pointer;
   transition: 0.2s;
 
-  &:hover {
-    background: #de3b4a;
-    color: white;
-  }
-
   &.react-tabs__tab--selected {
-    background: #de3b4a;
-    color: white;
+    border-color: #de3b4a;
   }
 `
 
