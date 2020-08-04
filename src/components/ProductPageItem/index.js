@@ -7,11 +7,19 @@ const ProductPageItem = ({ title, image, code, html }) => {
 
   return (
     <S.ProductItemWrapper>
-      {image.map((item, i) => (
-        <div key={i}>
-          <S.ProductItemImage fluid={item.childImageSharp.fluid} />
-        </div>
-      ))}
+      <S.CategoryTabs>
+        {image.map((item, i) => (
+          <S.CategoryTabPanel key={i}>
+            <S.ProductImage fluid={item.childImageSharp.fluid} />
+          </S.CategoryTabPanel>
+        ))}
+
+        <S.CategoryTabList>
+          {image.map(i => (
+            <S.CategoryTab key={i} />
+          ))}
+        </S.CategoryTabList>
+      </S.CategoryTabs>
       <S.ProductItemDesc>
         <S.ProductItemTitle>{title}</S.ProductItemTitle>
         <S.ProductItemCode>Ref.: {code}</S.ProductItemCode>
