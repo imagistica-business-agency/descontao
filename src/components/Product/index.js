@@ -9,7 +9,7 @@ const Product = ({ image, title, code, link }) => (
       <S.ProductImage fluid={item.childImageSharp.fluid} key={i} />
     ))} */}
 
-    <S.ProductImage fluid={image[0].childImageSharp.fluid} />
+    <S.ProductImage fluid={image.childImageSharp.fluid} />
 
     <S.ProductDesc>
       <div>

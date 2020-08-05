@@ -7,8 +7,8 @@ public_folder: /images
 locale: 'pt'
 
 collections:
-  - name: 'produtos'
-    label: 'Feminino'
+  - name: 'feminino'
+    label: 'Roupas Femininas'
     folder: 'src/pages/produtos'
     filter: {field: "category", value: "feminino"}
     create: true
@@ -17,7 +17,8 @@ collections:
     fields:
       - { label: 'Nome', name: 'title', widget: 'string' }
       - { label: 'Código', name: 'code', widget: 'string' }
-      - { label: 'Foto', name: 'image', widget: 'image', allow_multiple: false }
+      - { label: 'Imagem principal', name: 'image', widget: 'image', allow_multiple: false }
+      - { label: 'Demais imagens', name: 'images', widget: 'image', allow_multiple: true }
       - label: "Categoria"
         name: "category"
         widget: "select"

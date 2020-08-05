@@ -2,20 +2,26 @@ import React from 'react'
 
 import * as S from './styled'
 
-const ProductPageItem = ({ title, image, code, html }) => {
+const ProductPageItem = ({ title, image, images, code, html }) => {
   const message = 'Produto ' + title + ', código ' + code
 
   return (
     <S.ProductItemWrapper>
       <S.CategoryTabs>
-        {image.map((item, i) => (
+        <S.CategoryTabPanel>
+          <S.ProductImage fluid={image.childImageSharp.fluid} />
+        </S.CategoryTabPanel>
+        {images.map((item, i) => (
           <S.CategoryTabPanel key={i}>
             <S.ProductImage fluid={item.childImageSharp.fluid} />
           </S.CategoryTabPanel>
         ))}
 
         <S.CategoryTabList>
-          {image.map((thumb, ii) => (
+          <S.CategoryTab>
+            <S.ProductThumb fluid={image.childImageSharp.fluid} />
+          </S.CategoryTab>
+          {images.map((thumb, ii) => (
             <S.CategoryTab key={ii}>
               <S.ProductThumb fluid={thumb.childImageSharp.fluid} />
             </S.CategoryTab>
