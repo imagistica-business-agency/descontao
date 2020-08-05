@@ -10,6 +10,7 @@ collections:
   - name: 'produtos'
     label: 'Produtos'
     folder: 'src/pages/produtos'
+    create: true
     editor:
       preview: false
     fields:
