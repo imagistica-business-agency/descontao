@@ -19,7 +19,7 @@ collections:
       - label: "Categoria"
         name: "category"
         widget: "select"
-        multiple: true
+        multiple: false
         options:
           - { label: "Feminino", value: "feminino" }
           - { label: "Masculino", value: "masculino" }
