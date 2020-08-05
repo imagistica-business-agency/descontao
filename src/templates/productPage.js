@@ -67,7 +67,9 @@ export const query = graphql`
       limit: 1
       filter: {
         frontmatter: { featured: { eq: true }, category: { eq: $category } }
-      }, sort: {fields: frontmatter___date, order: DESC}) {
+      }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       edges {
         node {
           id
@@ -91,7 +93,9 @@ export const query = graphql`
       limit: 7
       filter: {
         frontmatter: { featured: { eq: false }, category: { eq: $category } }
-      }, sort: {fields: frontmatter___date, order: DESC}) {
+      }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       edges {
         node {
           id

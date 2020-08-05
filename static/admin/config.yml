@@ -9,26 +9,130 @@ locale: 'pt'
 collections:
   - name: 'feminino'
     label: 'Roupas Femininas'
+    label_singular: 'roupa feminina'
     folder: 'src/pages/produtos'
-    filter: {field: "category", value: "feminino"}
+    filter: { field: 'category', value: 'feminino' }
     create: true
     editor:
       preview: false
     fields:
+      - {
+          label: 'Categoria',
+          name: 'category',
+          widget: 'hidden',
+          default: 'feminino',
+        }
       - { label: 'Nome', name: 'title', widget: 'string' }
       - { label: 'Código', name: 'code', widget: 'string' }
-      - { label: 'Imagem principal', name: 'image', widget: 'image', allow_multiple: false }
-      - { label: 'Demais imagens', name: 'images', widget: 'image', allow_multiple: true }
-      - { label: 'Data', name: 'date', widget: 'date', dateFormat: 'DD/MM/YYYY', format: 'YYYY-MM-DD' }
-      - label: "Categoria"
-        name: "category"
-        widget: "select"
-        multiple: false
-        options:
-          - { label: "Feminino", value: "feminino" }
-          - { label: "Masculino", value: "masculino" }
-          - { label: "Infantil", value: "infantil" }
-          - { label: "Esportivo", value: "esportivo" }
-          - { label: "Moda íntima", value: "moda-intima" }
-          - { label: "Plus size", value: "plus-size" }
-      - { label: 'Em detaque?', name: 'featured', widget: 'boolean', default: false }
+      - {
+          label: 'Imagem principal',
+          name: 'image',
+          widget: 'image',
+          allow_multiple: false,
+        }
+      - {
+          label: 'Demais imagens',
+          name: 'images',
+          widget: 'image',
+          allow_multiple: true,
+        }
+      - {
+          label: 'Data de inclusão',
+          name: 'date',
+          widget: 'date',
+          dateFormat: 'DD/MM/YYYY',
+          format: 'YYYY-MM-DD',
+        }
+      - {
+          label: 'Em detaque?',
+          name: 'featured',
+          widget: 'boolean',
+          default: false,
+          hint: 'Dar destaque a esse produto na página inicial',
+        }
+  - name: 'masculino'
+    label: 'Roupas Masculinas'
+    label_singular: 'roupa masculina'
+    folder: 'src/pages/produtos'
+    filter: { field: 'category', value: 'masculino' }
+    create: true
+    editor:
+      preview: false
+    fields:
+      - {
+          label: 'Categoria',
+          name: 'category',
+          widget: 'hidden',
+          default: 'masculino',
+        }
+      - { label: 'Nome', name: 'title', widget: 'string' }
+      - { label: 'Código', name: 'code', widget: 'string' }
+      - {
+          label: 'Imagem principal',
+          name: 'image',
+          widget: 'image',
+          allow_multiple: false,
+        }
+      - {
+          label: 'Demais imagens',
+          name: 'images',
+          widget: 'image',
+          allow_multiple: true,
+        }
+      - {
+          label: 'Data de inclusão',
+          name: 'date',
+          widget: 'date',
+          dateFormat: 'DD/MM/YYYY',
+          format: 'YYYY-MM-DD',
+        }
+      - {
+          label: 'Em detaque?',
+          name: 'featured',
+          widget: 'boolean',
+          default: false,
+          hint: 'Dar destaque a esse produto na página inicial',
+        }
+  - name: 'infantil'
+    label: 'Roupas Infantis'
+    label_singular: 'roupa infantil'
+    folder: 'src/pages/produtos'
+    filter: { field: 'category', value: 'infantil' }
+    create: true
+    editor:
+      preview: false
+    fields:
+      - {
+          label: 'Categoria',
+          name: 'category',
+          widget: 'hidden',
+          default: 'infantil',
+        }
+      - { label: 'Nome', name: 'title', widget: 'string' }
+      - { label: 'Código', name: 'code', widget: 'string' }
+      - {
+          label: 'Imagem principal',
+          name: 'image',
+          widget: 'image',
+          allow_multiple: false,
+        }
+      - {
+          label: 'Demais imagens',
+          name: 'images',
+          widget: 'image',
+          allow_multiple: true,
+        }
+      - {
+          label: 'Data de inclusão',
+          name: 'date',
+          widget: 'date',
+          dateFormat: 'DD/MM/YYYY',
+          format: 'YYYY-MM-DD',
+        }
+      - {
+          label: 'Em detaque?',
+          name: 'featured',
+          widget: 'boolean',
+          default: false,
+          hint: 'Dar destaque a esse produto na página inicial',
+        }

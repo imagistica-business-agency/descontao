@@ -10,7 +10,9 @@ const CategoryList = () => {
         limit: 1
         filter: {
           frontmatter: { featured: { eq: true }, category: { eq: "masculino" } }
-        }, sort: {fields: frontmatter___date, order: DESC}) {
+        }
+        sort: { fields: frontmatter___date, order: DESC }
+      ) {
         edges {
           node {
             id
@@ -40,7 +42,9 @@ const CategoryList = () => {
             featured: { eq: false }
             category: { eq: "masculino" }
           }
-        }, sort: {fields: frontmatter___date, order: DESC}) {
+        }
+        sort: { fields: frontmatter___date, order: DESC }
+      ) {
         edges {
           node {
             id
