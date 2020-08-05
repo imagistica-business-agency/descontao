@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import ProductPageItem from '../components/ProductPageItem'
 import Category from '../components/Category'
@@ -19,7 +18,7 @@ const productPage = ({ data }) => {
   const otherProducts = data.otherProducts.edges
 
   return (
-    <Layout>
+    <>
       <SEO title={product.frontmatter.title} />
       <Wrapper>
         <ProductPageItem
@@ -35,7 +34,7 @@ const productPage = ({ data }) => {
           otherProducts={otherProducts}
         />
       </Wrapper>
-    </Layout>
+    </>
   )
 }
 

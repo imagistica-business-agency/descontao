@@ -68,6 +68,12 @@ module.exports = {
         // icon: `src/images/gatsby-icon.png`,
       }
     },
+    {
+      resolve: "gatsby-plugin-transition-link",
+      options: {
+        layout: require.resolve(`./src/components/Layout`)
+      }
+    },
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-offline`
   ]

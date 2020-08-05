@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import Category from '../components/Category'
 
@@ -16,7 +15,7 @@ const categoryPage = ({ data }) => {
   const featuredProduct = data.featuredProduct.edges
   const otherProducts = data.otherProducts.edges
   return (
-    <Layout>
+    <>
       <Wrapper>
         {featuredProduct.map(({ node: featuredProduct }) => (
           <>
@@ -31,7 +30,7 @@ const categoryPage = ({ data }) => {
           otherProducts={otherProducts}
         />
       </Wrapper>
-    </Layout>
+    </>
   )
 }
 

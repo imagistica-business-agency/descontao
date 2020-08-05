@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import logo from '../../../static/assets/logo.svg'
 import SocialLinks from '../SocialLinks'
@@ -9,45 +9,45 @@ const Nav = () => (
   <S.NavWrapper>
     <S.Nav>
       <S.Logo>
-        <Link to="/" alt="Início" activeClassName="active">
+        <AniLink paintDrip hex="#DE3B4A" to="/" alt="Início" activeClassName="active">
           <img src={logo} alt="Descontão" />
-        </Link>
+        </AniLink>
       </S.Logo>
       <S.Links>
         <S.Link>
-          <Link to="/" alt="Início" activeClassName="active">
+          <AniLink paintDrip hex="#DE3B4A" to="/" alt="Início" activeClassName="active">
             Início
-          </Link>
+          </AniLink>
         </S.Link>
         <S.Link>
-          <Link to="/feminino/" alt="Feminino" activeClassName="active">
+          <AniLink paintDrip hex="#DE3B4A" to="/feminino/" alt="Feminino" activeClassName="active">
             Feminino
-          </Link>
+          </AniLink>
         </S.Link>
         <S.Link>
-          <Link to="/masculino/" alt="Masculino" activeClassName="active">
+          <AniLink paintDrip hex="#DE3B4A" to="/masculino/" alt="Masculino" activeClassName="active">
             Masculino
-          </Link>
+          </AniLink>
         </S.Link>
         <S.Link>
-          <Link to="/infantil/" alt="Infantil" activeClassName="active">
+          <AniLink paintDrip hex="#DE3B4A" to="/infantil/" alt="Infantil" activeClassName="active">
             Infantil
-          </Link>
+          </AniLink>
         </S.Link>
         <S.Link>
-          <Link to="/esportivo/" alt="Esportivo" activeClassName="active">
+          <AniLink paintDrip hex="#DE3B4A" to="/esportivo/" alt="Esportivo" activeClassName="active">
             Esportivo
-          </Link>
+          </AniLink>
         </S.Link>
         <S.Link>
-          <Link to="/moda-intima/" alt="Moda Íntima" activeClassName="active">
+          <AniLink paintDrip hex="#DE3B4A" to="/moda-intima/" alt="Moda Íntima" activeClassName="active">
             Moda Íntima
-          </Link>
+          </AniLink>
         </S.Link>
         <S.Link>
-          <Link to="/plus-size/" alt="Plus Size" activeClassName="active">
+          <AniLink paintDrip hex="#DE3B4A" to="/plus-size/" alt="Plus Size" activeClassName="active">
             Plus Size
-          </Link>
+          </AniLink>
         </S.Link>
       </S.Links>
       <SocialLinks />
