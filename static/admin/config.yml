@@ -24,7 +24,7 @@ collections:
         options:
           - { label: "Feminino", value: "feminino" }
           - { label: "Masculino", value: "masculino" }
-          - { label: "Infatil", value: "infatil" }
+          - { label: "Infantil", value: "infantil" }
           - { label: "Esportivo", value: "esportivo" }
           - { label: "Moda íntima", value: "moda-intima" }
           - { label: "Plus size", value: "plus-size" }
