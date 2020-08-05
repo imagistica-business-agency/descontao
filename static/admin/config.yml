@@ -8,14 +8,15 @@ locale: 'pt'
 
 collections:
   - name: 'produtos'
-    label: 'Produtos'
+    label: 'Feminino'
     folder: 'src/pages/produtos'
+    filter: {field: "category", value: "feminino"}
     create: true
     editor:
       preview: false
     fields:
       - { label: 'Nome', name: 'title', widget: 'string' }
-      - { label: 'Código', name: 'code', widget: 'number' }
+      - { label: 'Código', name: 'code', widget: 'string' }
       - { label: 'Foto', name: 'image', widget: 'image', allow_multiple: false }
       - label: "Categoria"
         name: "category"
@@ -28,4 +29,4 @@ collections:
           - { label: "Esportivo", value: "esportivo" }
           - { label: "Moda íntima", value: "moda-intima" }
           - { label: "Plus size", value: "plus-size" }
-      - { label: 'Em detaque?', name: 'featured', widget: 'boolean' }
+      - { label: 'Em detaque?', name: 'featured', widget: 'boolean', default: false }
