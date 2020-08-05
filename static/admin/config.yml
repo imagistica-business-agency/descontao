@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/images
+public_folder: /images
+locale: 'pt'
+
+collections:
+  - name: 'produtos'
+    label: 'Produtos'
+    folder: 'src/pages/produtos'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Nome', name: 'title', widget: 'string' }
+      - { label: 'Código', name: 'code', widget: 'number' }
+      - { label: 'Foto', name: 'image', widget: 'image', allow_multiple: false }
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        multiple: true
+        options:
+          - { label: "Feminino", value: "feminino" }
+          - { label: "Masculino", value: "masculino" }
+          - { label: "Infatil", value: "infatil" }
+          - { label: "Esportivo", value: "esportivo" }
+          - { label: "Moda íntima", value: "moda-intima" }
+          - { label: "Plus size", value: "plus-size" }
+      - { label: 'Em detaque?', name: 'featured', widget: 'boolean' }
