@@ -1,23 +1,16 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 import * as S from './styled'
 
 const Product = ({ image, title, code, link }) => (
   <S.ProductWrapper>
-    {/* {image.map((item, i) => (
-      <S.ProductImage fluid={item.childImageSharp.fluid} key={i} />
-    ))} */}
-
     <S.ProductImage fluid={image.childImageSharp.fluid} />
-
     <S.ProductDesc>
-      <div>
-        <Link to={link} alt={title}>
-          <S.ProductTitle>{title}</S.ProductTitle>
-        </Link>
+      <AniLink paintDrip hex="#DE3B4A" to={link} alt={title}>
+        <S.ProductTitle>{title}</S.ProductTitle>
         <S.ProductRef>Ref.: {code}</S.ProductRef>
-      </div>
+      </AniLink>
       <S.HeartIcon />
     </S.ProductDesc>
   </S.ProductWrapper>
