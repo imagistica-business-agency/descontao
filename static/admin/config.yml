@@ -19,6 +19,7 @@ collections:
       - { label: 'Código', name: 'code', widget: 'string' }
       - { label: 'Imagem principal', name: 'image', widget: 'image', allow_multiple: false }
       - { label: 'Demais imagens', name: 'images', widget: 'image', allow_multiple: true }
+      - { label: 'Data', name: 'date', widget: 'date', dateFormat: 'DD/MM/YYYY', format: 'YYYY-MM-DD' }
       - label: "Categoria"
         name: "category"
         widget: "select"

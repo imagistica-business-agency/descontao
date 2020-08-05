@@ -10,8 +10,7 @@ const CategoryList = () => {
         limit: 1
         filter: {
           frontmatter: { featured: { eq: true }, category: { eq: "feminino" } }
-        }
-      ) {
+        }, sort: {fields: frontmatter___date, order: DESC}) {
         edges {
           node {
             id
@@ -19,6 +18,7 @@ const CategoryList = () => {
               title
               code
               category
+              date
               image {
                 childImageSharp {
                   fluid(maxWidth: 580, quality: 90) {
@@ -37,8 +37,7 @@ const CategoryList = () => {
         limit: 4
         filter: {
           frontmatter: { featured: { eq: false }, category: { eq: "feminino" } }
-        }
-      ) {
+        }, sort: {fields: frontmatter___date, order: DESC}) {
         edges {
           node {
             id
@@ -46,6 +45,7 @@ const CategoryList = () => {
               title
               code
               category
+              date
               image {
                 childImageSharp {
                   fluid(maxWidth: 580, quality: 90) {

@@ -38,11 +38,10 @@ const categoryPage = ({ data }) => {
 export const query = graphql`
   query($category: String!) {
     featuredProduct: allMarkdownRemark(
-      limit: 1
+      limit: 50
       filter: {
         frontmatter: { featured: { eq: true }, category: { eq: $category } }
-      }
-    ) {
+      }, sort: {fields: frontmatter___date, order: DESC}) {
       edges {
         node {
           id
@@ -50,6 +49,7 @@ export const query = graphql`
             title
             code
             category
+            date
             image {
               childImageSharp {
                 fluid(maxWidth: 580, quality: 90) {
@@ -65,19 +65,18 @@ export const query = graphql`
       }
     }
     otherProducts: allMarkdownRemark(
-      limit: 4
+      limit: 50
       filter: {
         frontmatter: { featured: { eq: false }, category: { eq: $category } }
-      }
-    ) {
+      }, sort: {fields: frontmatter___date, order: DESC}) {
       edges {
         node {
           id
           frontmatter {
             title
             code
-            desc
             category
+            date
             image {
               childImageSharp {
                 fluid(maxWidth: 580, quality: 90) {
