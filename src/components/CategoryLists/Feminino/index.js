@@ -18,7 +18,6 @@ const CategoryList = () => {
             frontmatter {
               title
               code
-              desc
               category
               image {
                 childImageSharp {
@@ -46,7 +45,6 @@ const CategoryList = () => {
             frontmatter {
               title
               code
-              desc
               category
               image {
                 childImageSharp {

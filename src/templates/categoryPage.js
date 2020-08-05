@@ -49,7 +49,6 @@ export const query = graphql`
           frontmatter {
             title
             code
-            desc
             category
             image {
               childImageSharp {
