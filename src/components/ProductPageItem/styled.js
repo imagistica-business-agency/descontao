@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import Img from 'gatsby-image'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import { Whatsapp } from '@styled-icons/remix-fill/Whatsapp'
@@ -8,6 +9,10 @@ export const ProductItemWrapper = styled.section`
   grid-template-columns: 1fr 2fr;
   gap: 20px;
   padding: 80px 0 100px;
+
+  ${media.lessThan('medium')`
+    grid-template-columns: 1fr;
+  `}
 `
 
 export const ProductImage = styled(Img)`
@@ -44,7 +49,11 @@ export const CategoryTab = styled(Tab)`
 
 export const CategoryTabPanel = styled(TabPanel)``
 
-export const ProductItemDesc = styled.div``
+export const ProductItemDesc = styled.div`
+  ${media.lessThan('medium')`
+    order: -1;
+  `}
+`
 
 export const ProductItemTitle = styled.h2`
   color: #de3b4a;
