@@ -24,7 +24,7 @@ const productPage = ({ data }) => {
         <ProductPageItem
           title={product.frontmatter.title}
           image={product.frontmatter.image}
-          images={product.frontmatter.images}
+          // images={product.frontmatter.images}
           code={product.frontmatter.code}
           html={product.html}
         />
@@ -51,13 +51,13 @@ export const query = graphql`
             }
           }
         }
-        images {
-          childImageSharp {
-            fluid(maxWidth: 580, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
+        # images {
+        #   childImageSharp {
+        #     fluid(maxWidth: 580, quality: 90) {
+        #       ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        #     }
+        #   }
+        # }
       }
       id
       html

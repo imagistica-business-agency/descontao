@@ -75,7 +75,7 @@ const Nav = () => (
             Esportivo
           </AniLink>
         </S.Link>
-        <S.Link>
+        {/* <S.Link>
           <AniLink
             paintDrip
             hex="#DE3B4A"
@@ -96,7 +96,7 @@ const Nav = () => (
           >
             Plus Size
           </AniLink>
-        </S.Link>
+        </S.Link> */}
       </S.Links>
       <SocialLinks />
     </S.Nav>
