@@ -22,7 +22,7 @@ const ProductPageItem = ({ title, image, images, code, html }) => {
           <S.CategoryTab>
             {image && <S.ProductThumb fluid={image.childImageSharp.fluid} />}
           </S.CategoryTab>
-          (
+
           {images &&
             images.map((thumb, ii) => (
               <S.CategoryTab key={ii}>

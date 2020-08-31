@@ -13,9 +13,8 @@ const Wrapper = styled.section`
 `
 
 const productPage = ({ data }) => {
-  const product = data.product
-  const featuredProduct = data.featuredProduct.edges
-  const otherProducts = data.otherProducts.edges
+  const product = data.Product
+  const Products = data.Products.edges
 
   return (
     <>
@@ -24,15 +23,12 @@ const productPage = ({ data }) => {
         <ProductPageItem
           title={product.frontmatter.title}
           image={product.frontmatter.image}
-          // images={product.frontmatter.images}
+          images={product.frontmatter.images}
           code={product.frontmatter.code}
           html={product.html}
         />
         <h2>Talvez você se interesse</h2>
-        <Category
-          featuredProduct={featuredProduct}
-          otherProducts={otherProducts}
-        />
+        <Category Products={Products} />
       </Wrapper>
     </>
   )
@@ -40,7 +36,7 @@ const productPage = ({ data }) => {
 
 export const query = graphql`
   query($id: String!, $category: String!) {
-    product: markdownRemark(id: { eq: $id }) {
+    Product: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
         code
@@ -62,37 +58,9 @@ export const query = graphql`
       id
       html
     }
-    featuredProduct: allMarkdownRemark(
-      limit: 1
-      filter: {
-        frontmatter: { featured: { eq: true }, category: { eq: $category } }
-      }
-      sort: { fields: frontmatter___date, order: DESC }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            code
-            category
-            date
-            image {
-              childImageSharp {
-                fluid(maxWidth: 580, quality: 90) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    otherProducts: allMarkdownRemark(
+    Products: allMarkdownRemark(
       limit: 7
-      filter: {
-        frontmatter: { featured: { eq: false }, category: { eq: $category } }
-      }
+      filter: { frontmatter: { category: { eq: $category } } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {

@@ -13,7 +13,7 @@ const Category = ({ Products }) => (
           '/' + product.frontmatter.category + '/' + product.frontmatter.code
         }
         code={product.frontmatter.code}
-        // image={product.frontmatter.image}
+        image={product.frontmatter.image}
       />
     ))}
   </S.GridWrapper>
