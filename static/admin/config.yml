@@ -43,13 +43,6 @@ collections:
           dateFormat: 'DD/MM/YYYY',
           format: 'YYYY-MM-DD',
         }
-      - {
-          label: 'Em detaque?',
-          name: 'featured',
-          widget: 'boolean',
-          default: false,
-          hint: 'Dar destaque a esse produto na página inicial',
-        }
   - name: 'masculino'
     label: 'Roupas Masculinas'
     label_singular: 'roupa masculina'
@@ -86,13 +79,6 @@ collections:
           dateFormat: 'DD/MM/YYYY',
           format: 'YYYY-MM-DD',
         }
-      - {
-          label: 'Em detaque?',
-          name: 'featured',
-          widget: 'boolean',
-          default: false,
-          hint: 'Dar destaque a esse produto na página inicial',
-        }
   - name: 'infantil'
     label: 'Roupas Infantis'
     label_singular: 'roupa infantil'
@@ -128,11 +114,4 @@ collections:
           widget: 'date',
           dateFormat: 'DD/MM/YYYY',
           format: 'YYYY-MM-DD',
-        }
-      - {
-          label: 'Em detaque?',
-          name: 'featured',
-          widget: 'boolean',
-          default: false,
-          hint: 'Dar destaque a esse produto na página inicial',
         }
