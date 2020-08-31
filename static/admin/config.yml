@@ -35,6 +35,7 @@ collections:
           name: 'images',
           widget: 'image',
           allow_multiple: true,
+          required: false,
         }
       - {
           label: 'Data de inclusão',
@@ -71,6 +72,7 @@ collections:
           name: 'images',
           widget: 'image',
           allow_multiple: true,
+          required: false,
         }
       - {
           label: 'Data de inclusão',
@@ -107,6 +109,44 @@ collections:
           name: 'images',
           widget: 'image',
           allow_multiple: true,
+          required: false,
+        }
+      - {
+          label: 'Data de inclusão',
+          name: 'date',
+          widget: 'date',
+          dateFormat: 'DD/MM/YYYY',
+          format: 'YYYY-MM-DD',
+        }
+  - name: 'esportivo'
+    label: 'Roupas Esportivas'
+    label_singular: 'roupa esportiva'
+    folder: 'src/pages/produtos'
+    filter: { field: 'category', value: 'esportivo' }
+    create: true
+    editor:
+      preview: false
+    fields:
+      - {
+          label: 'Categoria',
+          name: 'category',
+          widget: 'hidden',
+          default: 'esportivo',
+        }
+      - { label: 'Nome', name: 'title', widget: 'string' }
+      - { label: 'Código', name: 'code', widget: 'string' }
+      - {
+          label: 'Imagem principal',
+          name: 'image',
+          widget: 'image',
+          allow_multiple: false,
+        }
+      - {
+          label: 'Demais imagens',
+          name: 'images',
+          widget: 'image',
+          allow_multiple: true,
+          required: false,
         }
       - {
           label: 'Data de inclusão',

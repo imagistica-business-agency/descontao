@@ -3,6 +3,7 @@ import React from 'react'
 import Feminino from './Feminino'
 import Masculino from './Masculino'
 import Infantil from './Infantil'
+import Esportivo from './Esportivo'
 
 import * as S from './styled'
 
@@ -25,6 +26,10 @@ const CategoryLists = () => (
 
       <S.CategoryTabPanel>
         <Infantil />
+      </S.CategoryTabPanel>
+
+      <S.CategoryTabPanel>
+        <Esportivo />
       </S.CategoryTabPanel>
     </S.CategoryTabs>
   </S.CategoryWrapper>
