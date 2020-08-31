@@ -9,23 +9,26 @@ const ProductPageItem = ({ title, image, images, code, html }) => {
     <S.ProductItemWrapper>
       <S.CategoryTabs>
         <S.CategoryTabPanel>
-          <S.ProductImage fluid={image.childImageSharp.fluid} />
+          {image && <S.ProductImage fluid={image.childImageSharp.fluid} />}
         </S.CategoryTabPanel>
-        {images.map((item, i) => (
-          <S.CategoryTabPanel key={i}>
-            <S.ProductImage fluid={item.childImageSharp.fluid} />
-          </S.CategoryTabPanel>
-        ))}
 
+        {images &&
+          images.map((item, i) => (
+            <S.CategoryTabPanel key={i}>
+              <S.ProductImage fluid={item.childImageSharp.fluid} />
+            </S.CategoryTabPanel>
+          ))}
         <S.CategoryTabList>
           <S.CategoryTab>
-            <S.ProductThumb fluid={image.childImageSharp.fluid} />
+            {image && <S.ProductThumb fluid={image.childImageSharp.fluid} />}
           </S.CategoryTab>
-          {images.map((thumb, ii) => (
-            <S.CategoryTab key={ii}>
-              <S.ProductThumb fluid={thumb.childImageSharp.fluid} />
-            </S.CategoryTab>
-          ))}
+          (
+          {images &&
+            images.map((thumb, ii) => (
+              <S.CategoryTab key={ii}>
+                <S.ProductThumb fluid={thumb.childImageSharp.fluid} />
+              </S.CategoryTab>
+            ))}
         </S.CategoryTabList>
       </S.CategoryTabs>
       <S.ProductItemDesc>

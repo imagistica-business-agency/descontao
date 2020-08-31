@@ -12,64 +12,25 @@ const Wrapper = styled.section`
 `
 
 const categoryPage = ({ data }) => {
-  const featuredProduct = data.featuredProduct.edges
-  const otherProducts = data.otherProducts.edges
+  const Products = data.Products.edges
+
   return (
-    <>
-      <Wrapper>
-        {featuredProduct.map(({ node: featuredProduct }) => (
-          <>
-            <SEO title={featuredProduct.frontmatter.category} />
-            <h2 style={{ textTransform: 'capitalize' }}>
-              {featuredProduct.frontmatter.category}
-            </h2>
-          </>
-        ))}
-        <Category
-          featuredProduct={featuredProduct}
-          otherProducts={otherProducts}
-        />
-      </Wrapper>
-    </>
+    <Wrapper>
+      <SEO title={data.Products.edges[0].node.frontmatter.category} />
+      <h2 style={{ textTransform: 'capitalize' }}>
+        {data.Products.edges[0].node.frontmatter.category}
+      </h2>
+
+      <Category Products={Products} />
+    </Wrapper>
   )
 }
 
 export const query = graphql`
   query($category: String!) {
-    featuredProduct: allMarkdownRemark(
+    Products: allMarkdownRemark(
       limit: 50
-      filter: {
-        frontmatter: { featured: { eq: true }, category: { eq: $category } }
-      }
-      sort: { fields: frontmatter___date, order: DESC }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            code
-            category
-            date
-            image {
-              childImageSharp {
-                fluid(maxWidth: 580, quality: 90) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
-            }
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-    otherProducts: allMarkdownRemark(
-      limit: 50
-      filter: {
-        frontmatter: { featured: { eq: false }, category: { eq: $category } }
-      }
+      filter: { frontmatter: { category: { eq: $category } } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {

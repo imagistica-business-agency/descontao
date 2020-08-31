@@ -6,40 +6,9 @@ import Category from '../../Category'
 const CategoryList = () => {
   const data = useStaticQuery(graphql`
     query {
-      featuredProduct: allMarkdownRemark(
-        limit: 1
-        filter: {
-          frontmatter: { featured: { eq: true }, category: { eq: "feminino" } }
-        }
-        sort: { fields: frontmatter___date, order: DESC }
-      ) {
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              code
-              category
-              date
-              image {
-                childImageSharp {
-                  fluid(maxWidth: 580, quality: 90) {
-                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                  }
-                }
-              }
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-      otherProducts: allMarkdownRemark(
-        limit: 4
-        filter: {
-          frontmatter: { featured: { eq: false }, category: { eq: "feminino" } }
-        }
+      Products: allMarkdownRemark(
+        limit: 5
+        filter: { frontmatter: { category: { eq: "feminino" } } }
         sort: { fields: frontmatter___date, order: DESC }
       ) {
         edges {
@@ -66,12 +35,10 @@ const CategoryList = () => {
       }
     }
   `)
-  const featuredProduct = data.featuredProduct.edges
-  const otherProducts = data.otherProducts.edges
 
-  return (
-    <Category featuredProduct={featuredProduct} otherProducts={otherProducts} />
-  )
+  const Products = data.Products.edges
+
+  return <Category Products={Products} />
 }
 
 export default CategoryList

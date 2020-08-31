@@ -5,7 +5,7 @@ import * as S from './styled'
 
 const Product = ({ image, title, code, link }) => (
   <S.ProductWrapper>
-    <S.ProductImage fluid={image.childImageSharp.fluid} />
+    {image && <S.ProductImage fluid={image.childImageSharp.fluid} />}
     <S.ProductDesc>
       <AniLink paintDrip hex="#DE3B4A" to={link} alt={title}>
         <S.ProductTitle>{title}</S.ProductTitle>
