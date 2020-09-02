@@ -156,3 +156,77 @@ collections:
           dateFormat: 'DD/MM/YYYY',
           format: 'YYYY-MM-DD',
         }
+  - name: 'moda-intima'
+    label: 'Moda Íntima'
+    label_singular: 'moda íntima'
+    folder: 'src/pages/produtos'
+    filter: { field: 'category', value: 'moda-intima' }
+    create: true
+    editor:
+      preview: false
+    fields:
+      - {
+          label: 'Categoria',
+          name: 'category',
+          widget: 'hidden',
+          default: 'moda-intima',
+        }
+      - { label: 'Nome', name: 'title', widget: 'string' }
+      - { label: 'Código', name: 'code', widget: 'string' }
+      - {
+          label: 'Imagem principal',
+          name: 'image',
+          widget: 'image',
+          allow_multiple: false,
+        }
+      - {
+          label: 'Demais imagens',
+          name: 'images',
+          widget: 'image',
+          allow_multiple: true,
+          required: false,
+        }
+      - {
+          label: 'Data de inclusão',
+          name: 'date',
+          widget: 'date',
+          dateFormat: 'DD/MM/YYYY',
+          format: 'YYYY-MM-DD',
+        }
+  - name: 'plus-size'
+    label: 'Roupas Plus Size'
+    label_singular: 'roupa plus size'
+    folder: 'src/pages/produtos'
+    filter: { field: 'category', value: 'moda-intima' }
+    create: true
+    editor:
+      preview: false
+    fields:
+      - {
+          label: 'Categoria',
+          name: 'category',
+          widget: 'hidden',
+          default: 'plus-size',
+        }
+      - { label: 'Nome', name: 'title', widget: 'string' }
+      - { label: 'Código', name: 'code', widget: 'string' }
+      - {
+          label: 'Imagem principal',
+          name: 'image',
+          widget: 'image',
+          allow_multiple: false,
+        }
+      - {
+          label: 'Demais imagens',
+          name: 'images',
+          widget: 'image',
+          allow_multiple: true,
+          required: false,
+        }
+      - {
+          label: 'Data de inclusão',
+          name: 'date',
+          widget: 'date',
+          dateFormat: 'DD/MM/YYYY',
+          format: 'YYYY-MM-DD',
+        }
