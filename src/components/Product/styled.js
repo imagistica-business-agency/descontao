@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import Img from 'gatsby-image'
 import { Heart } from '@styled-icons/fa-regular/Heart'
 import { Heart as HeartSolid } from '@styled-icons/fa-solid/Heart'
@@ -35,6 +36,10 @@ export const ProductImage = styled(Img)`
   width: 100%;
   min-height: 300px;
   margin-bottom: 10px;
+
+  ${media.lessThan('medium')`
+    min-height: 150px;
+  `}
 `
 
 export const ProductDesc = styled.div`

@@ -105,7 +105,7 @@ const Nav = () => (
         <S.Title>
           <S.MegaphoneIcon /> Preços baixos de verdade
         </S.Title>
-        <S.Title>
+        <S.Title className="second">
           <S.BagIcon /> As melhores roupas para toda família
         </S.Title>
       </S.SubNavContainer>

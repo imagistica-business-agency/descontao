@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import { Megaphone } from '@styled-icons/ionicons-outline/Megaphone'
 import { ShoppingBag as Bag } from '@styled-icons/boxicons-regular/ShoppingBag'
 
@@ -14,6 +15,11 @@ export const Nav = styled.nav`
   max-width: 1320px;
   margin: auto;
   padding: 20px 20px 15px;
+
+  ${media.lessThan('medium')`
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  `}
 `
 
 export const Logo = styled.div``
@@ -22,6 +28,10 @@ export const Links = styled.ul`
   display: flex;
   list-style-type: none;
   margin: auto;
+
+  ${media.lessThan('medium')`
+    display: none;
+  `}
 `
 
 export const Link = styled.li`
@@ -55,6 +65,10 @@ export const SubNavContainer = styled.div`
   max-width: 1320px;
   margin: auto;
   padding: 8px 20px;
+
+  ${media.lessThan('medium')`
+  grid-template-columns: 1fr;
+  `}
 `
 
 export const Title = styled.div`
@@ -62,6 +76,12 @@ export const Title = styled.div`
   text-align: center;
   font-weight: 900;
   font-style: italic;
+
+  ${media.lessThan('medium')`
+    &.second {
+      display: none;
+    }
+  `}
 `
 
 export const MegaphoneIcon = styled(Megaphone)`
