@@ -1,28 +1,28 @@
 const links = [
   {
     label: 'Facebook',
-    url: `https://www.facebook.com`
+    url: `https://pt-br.facebook.com/loja.descontao/`
   },
   {
     label: 'Instagram',
-    url: `https://instagram.com`
+    url: `https://www.instagram.com/lojasdescontao/`
   },
   {
     label: 'Whatsapp',
-    url: `https://youtube.com`
+    url: `https://wa.me/5545988031679`
   },
   {
     label: 'Youtube',
     url: `https://youtube.com`
-  },
-  {
-    label: 'Tiktok',
-    url: `https://tiktok.com/`
-  },
-  {
-    label: 'Heart',
-    url: `https://tiktok.com/`
   }
+  // {
+  //   label: 'Tiktok',
+  //   url: `https://tiktok.com/`
+  // },
+  // {
+  //   label: 'Heart',
+  //   url: `https://tiktok.com/`
+  // }
 ]
 
 export default links

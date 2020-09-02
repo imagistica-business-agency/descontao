@@ -18,7 +18,11 @@ const Footer = () => (
 
               <S.WhatsappIcon />
               <a
-                href={address.whatsapp}
+                href={
+                  'http://wa.me/55' +
+                  address.ddd +
+                  address.whatsapp.replace(/\s/g, '')
+                }
                 alt="WhatsApp"
                 rel="noopener noreferrer"
                 target="_blank"

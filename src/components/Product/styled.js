@@ -5,13 +5,29 @@ import { Heart as HeartSolid } from '@styled-icons/fa-solid/Heart'
 
 export const ProductWrapper = styled.div`
   display: grid;
-  grid-template-rows: 1fr 40px;
+  grid-template-rows: 1fr 50px;
   align-content: stretch;
 
   :nth-child(1) {
     grid-row: span 2;
     grid-column: span 2;
     justify-content: stretch;
+  }
+
+  :nth-child(5n + 1) {
+    background: #e5e5e5;
+  }
+  :nth-child(5n + 2) {
+    background: #ffe8c5;
+  }
+  :nth-child(5n + 3) {
+    background: #ffc6cb;
+  }
+  :nth-child(5n + 4) {
+    background: #e0ffd8;
+  }
+  :nth-child(5n + 5) {
+    background: #d7ecff;
   }
 `
 
@@ -25,6 +41,7 @@ export const ProductDesc = styled.div`
   display: grid;
   grid-template-columns: 1fr 20px;
   align-items: center;
+  background: white;
 `
 
 export const ProductTitle = styled.h3`

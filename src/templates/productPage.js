@@ -59,7 +59,7 @@ export const query = graphql`
       html
     }
     Products: allMarkdownRemark(
-      limit: 7
+      limit: 5
       filter: { frontmatter: { category: { eq: $category } } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {

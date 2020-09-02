@@ -1,6 +1,8 @@
 import React from 'react'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 import Feminino from './Feminino'
+import Banner from '../Banner'
 import Masculino from './Masculino'
 import Infantil from './Infantil'
 import Esportivo from './Esportivo'
@@ -8,31 +10,47 @@ import Esportivo from './Esportivo'
 import * as S from './styled'
 
 const CategoryLists = () => (
-  <S.CategoryWrapper>
-    <S.CategoryTabs>
-      <S.CategoryTabList>
-        <S.CategoryTab>Feminino</S.CategoryTab>
-        <S.CategoryTab>Masculino</S.CategoryTab>
-        <S.CategoryTab>Infantil</S.CategoryTab>
-      </S.CategoryTabList>
+  <>
+    <S.CategoryWrapper>
+      <h2>Setor Feminino</h2>
+      <Feminino />
+      <AniLink paintDrip hex="#DE3B4A" to="/feminino/" alt="Feminino">
+        <S.Button>
+          <S.PlusIcon />
+          Veja mais
+        </S.Button>
+      </AniLink>
+    </S.CategoryWrapper>
 
-      <S.CategoryTabPanel>
-        <Feminino />
-      </S.CategoryTabPanel>
+    <Banner />
 
-      <S.CategoryTabPanel>
-        <Masculino />
-      </S.CategoryTabPanel>
-
-      <S.CategoryTabPanel>
-        <Infantil />
-      </S.CategoryTabPanel>
-
-      <S.CategoryTabPanel>
-        <Esportivo />
-      </S.CategoryTabPanel>
-    </S.CategoryTabs>
-  </S.CategoryWrapper>
+    <S.CategoryWrapper>
+      <h2>Setor Masculino</h2>
+      <Masculino />
+      <AniLink paintDrip hex="#DE3B4A" to="/masculino/" alt="Masculino">
+        <S.Button>
+          <S.PlusIcon />
+          Veja mais
+        </S.Button>
+      </AniLink>
+      <h2>Setor Infantil</h2>
+      <Infantil />
+      <AniLink paintDrip hex="#DE3B4A" to="/infantil/" alt="Infantil">
+        <S.Button>
+          <S.PlusIcon />
+          Veja mais
+        </S.Button>
+      </AniLink>
+      <h2>Setor Esportivo</h2>
+      <Esportivo />
+      <AniLink paintDrip hex="#DE3B4A" to="/esportivo/" alt="Esportivo">
+        <S.Button>
+          <S.PlusIcon />
+          Veja mais
+        </S.Button>
+      </AniLink>
+    </S.CategoryWrapper>
+  </>
 )
 
 export default CategoryLists

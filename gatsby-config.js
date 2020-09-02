@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `gatsby-clean-starter`,
-    description: `Lorem ipsum.`
+    title: `Descontão`,
+    description: `Lojas Descontão, menor preço garantido.`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -59,13 +59,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby clean starter`,
-        short_name: `gatsby`,
+        name: `Descontão`,
+        short_name: `Descontão`,
         start_url: `/`,
         background_color: `#de3b4a`,
-        theme_color: `#de3b4a`,
-        display: `minimal-ui`
-        // icon: `src/images/gatsby-icon.png`,
+        theme_color: `#DE3B4A`,
+        display: `fullscreen`,
+        icon: `static/assets/icon.png`
       }
     },
     {

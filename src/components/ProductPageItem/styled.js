@@ -6,7 +6,7 @@ import { Whatsapp } from '@styled-icons/remix-fill/Whatsapp'
 
 export const ProductItemWrapper = styled.section`
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding: 80px 0 100px;
 
@@ -17,8 +17,8 @@ export const ProductItemWrapper = styled.section`
 
 export const ProductImage = styled(Img)`
   width: 100%;
-  min-height: 400px;
-  max-height: 400px;
+  min-height: 600px;
+  max-height: 600px;
 `
 
 export const ProductThumb = styled(Img)`

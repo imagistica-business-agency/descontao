@@ -75,13 +75,13 @@ const Nav = () => (
             Esportivo
           </AniLink>
         </S.Link>
-        {/* <S.Link>
+        <S.Link>
           <AniLink
             paintDrip
             hex="#DE3B4A"
-            to="/moda-intima/"
+            to="/"
             alt="Moda Íntima"
-            activeClassName="active"
+            // activeClassName="active"
           >
             Moda Íntima
           </AniLink>
@@ -90,24 +90,23 @@ const Nav = () => (
           <AniLink
             paintDrip
             hex="#DE3B4A"
-            to="/plus-size/"
+            to="/"
             alt="Plus Size"
-            activeClassName="active"
+            // activeClassName="active"
           >
             Plus Size
           </AniLink>
-        </S.Link> */}
+        </S.Link>
       </S.Links>
       <SocialLinks />
     </S.Nav>
     <S.SubNav>
       <S.SubNavContainer>
         <S.Title>
-          <S.MegaphoneIcon /> Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit
+          <S.MegaphoneIcon /> Preços baixos de verdade
         </S.Title>
         <S.Title>
-          <S.BagIcon /> Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          <S.BagIcon /> As melhores roupas para toda família
         </S.Title>
       </S.SubNavContainer>
     </S.SubNav>
