@@ -9,7 +9,7 @@ const links = [
   },
   {
     label: 'Whatsapp',
-    url: `https://wa.me/5545988031679`
+    url: `https://wa.me/5545999990565`
   },
   {
     label: 'Youtube',
