@@ -46,6 +46,6 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && netlify deploy -p"
+    "deploy": "yarn build && netlify deploy -p"
   }
 }
